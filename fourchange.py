@@ -28,9 +28,12 @@ def mkdir():
 
 def read_log():     #读取文档存入集合中#
     logs = set()
-    filepath_list = ["D:\ip-test\log\\ftp\success.log"]
-    # filepath_list = ["http\success.log","smtp\success.log","ssh\success.log",
-    #                  "telnet\success.log","ftp\success.log"]
+    # filepath_list = [".\\log\\ftp\success.log"]
+    filepath_list = [r"successlog\http\success.log",
+                     r"successlog\smtp\success.log",
+                     r"successlog\ssh\success.log",
+                     r"successlog\telnet\success.log",
+                     r"successlog\ftp\success.log"]
     for i in range(len(filepath_list)):
       with open(filepath_list[i],"r+") as f1:
           for line in f1:
